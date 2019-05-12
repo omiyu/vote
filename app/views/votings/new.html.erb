@@ -1,0 +1,41 @@
+<!--投票ページ-->
+<div class="page-name">★ Vote</div>
+
+<div class="new-voting">
+  <%= form_for(@voting) do |f| %>
+
+    <div class="content">
+      <div class="content-tag">Question</div>
+      <p>・<%= @make.question %></p>
+      <%= f.hidden_field :make_id, value: @make.id%>
+    </div>
+
+    <div class="content">
+      <div class="content-tag">Category</div>
+      <p>・<%= @category.category_name %></p>
+    </div>
+
+    <div class="content">
+      <div class="content-tag">Options</div>
+      <p>・質問に最も当てはまる選択肢を選んでください</p>
+      <div class="option-tag">
+        <ol class="option-select-tag">
+          <li><label> <%= f.radio_button(:answer_id, 1) %> <%= @make.answer_1 %></label></li>
+          <li><label> <%= f.radio_button(:answer_id, 2) %> <%= @make.answer_2 %></label></li>
+          <li><label> <%= f.radio_button(:answer_id, 3) %> <%= @make.answer_3 %></label></li>
+          <li><label> <%= f.radio_button(:answer_id, 4) %> <%= @make.answer_4 %></label></li>
+          <li><label> <%= f.radio_button(:answer_id, 5) %> <%= @make.answer_5 %></label></li>
+          <li><label> <%= f.radio_button(:answer_id, 6) %> <%= @make.answer_6 %></label></li>
+          <li><label> <%= f.radio_button(:answer_id, 7) %> <%= @make.answer_7 %></label></li>
+          <li><label> <%= f.radio_button(:answer_id, 8) %> <%= @make.answer_8 %></label></li>
+          <li><label> <%= f.radio_button(:answer_id, 9) %> <%= @make.answer_9 %></label></li>
+          <li><label> <%= f.radio_button(:answer_id, 10) %> <%= @make.answer_10 %></label></li>
+        </ol>
+        <p class="vote-btn"><%= f.submit "Vote it",class: "btn btn-primary"%></p>
+      </div>
+    </div>
+
+
+  <% end %>
+
+</div>

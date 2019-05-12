@@ -1,0 +1,58 @@
+<!--　マイページトップ-->
+<div class="page-name">★ My page</div>
+
+<div class="my-page">
+
+  <div class="content">
+
+    <div class="content-tag">Account</div>
+      <div class="account-name">@<%= @user.name%></div>
+      <ul class="Profile-list">
+        <li>E-mail address : <%= @user.email%></li>
+        <li>Age : <%= @user.age %> 歳</li>
+        <li>Sex : <%= @sex %></li>
+        <li>Profession : <%= @user.profession%></li>
+        <li>Address : <%= @user.address_pref%></li>
+        <li>Annual income : <%= @user.annual_income%> 万円</li>
+      </ul>
+
+  </div>
+
+  <div class="content">
+
+    <div class="content-tag">Made</div>
+    <% if @graphs %>
+      <div class="pie-charts">
+        <% @graphs.each_with_index do |graph,i|%>
+          <div class="pie-chart">
+            <%= high_chart("chart#{i}", graph) %>
+            <div class="votes-count">
+              Votes Cast：<%= graph[0][:answer_all_ct]%>
+            </div>
+            <div class="vote-btn">
+              <!-- <button type="button" class="btn btn-primary"> -->
+              <p><%= link_to "Vote", new_voting_path(make_id: graph[0][:make_id]),type: "button", class: "btn btn-primary"%></p>
+              <!-- </button> -->
+              <p><%= link_to "CSV", csv_export_path(make_id: graph[0][:make_id],format: "csv"), type: "button", class: "btn btn-warning"%></p>
+              <!-- <button type="button" class="btn btn-danger"> -->
+              <p><%= link_to "Delete", make_path(make_id: graph[0][:make_id]),method: :delete,　type: "button", class: "btn btn-danger", data: { confirm: "Do you really want to delete?" } %></p>
+              <!-- </button> -->
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <p> Let's make a question!</p>
+    <% end %>
+
+  </div>
+
+  <div class="content">
+    <div class="content-tag">Like</div>
+      <div class="Pie charts">
+        <div class="Pie chart">
+
+        </div>
+      </div>
+  </div>
+</div>

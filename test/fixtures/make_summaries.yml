@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  make_id: MyString
+  integer: MyString
+  answer_1_ct: MyString
+  integer: MyString
+  answer_2_ct: MyString
+  integer: MyString
+  answer_3_ct: MyString
+  integer: MyString
+  answer_4_ct: MyString
+  integer: MyString
+  answer_5_ct: MyString
+  integer: MyString
+  answer_6_ct: MyString
+  integer: MyString
+  answer_7_ct: MyString
+  integer: MyString
+  answer_8_ct: MyString
+  integer: MyString
+  answer_9_ct: MyString
+  integer: MyString
+  answer_10_ct: MyString
+  integer: MyString
+
+two:
+  make_id: MyString
+  integer: MyString
+  answer_1_ct: MyString
+  integer: MyString
+  answer_2_ct: MyString
+  integer: MyString
+  answer_3_ct: MyString
+  integer: MyString
+  answer_4_ct: MyString
+  integer: MyString
+  answer_5_ct: MyString
+  integer: MyString
+  answer_6_ct: MyString
+  integer: MyString
+  answer_7_ct: MyString
+  integer: MyString
+  answer_8_ct: MyString
+  integer: MyString
+  answer_9_ct: MyString
+  integer: MyString
+  answer_10_ct: MyString
+  integer: MyString

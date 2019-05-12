@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vote</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class = "wrapper">
+    	<header>
+    		<ul class = "navi-tag">
+    			<% if @current_user %>
+    				<li>
+    				<%= link_to("My page", "/users/#{@current_user.id}",class: 'btn') %>
+    				</li>
+            <li> / </li>
+    				<li>
+    				<%= link_to("Logout", "/logout", class: 'btn') %>
+    			    </li>
+    			<% else %>
+    				<li>
+    				<%= link_to("Sign up", "/signup", class: 'btn') %>
+    				</li>
+            <li> / </li>
+    				<li>
+    				<%= link_to("Login", "/login", class: 'btn') %>
+    				</li>
+    			<% end %>
+    		</ul>
+
+    		<div class = "site-title-name">
+    			<p class = "title-name">VOTE</p>
+    		</div>
+
+    		<% if @current_user %>
+    			<ul class = "navi-top-tag">
+    				<li>
+    					<%= link_to("New", makes_path(sort: "new"), class: 'btn') %>
+    				</li>
+    				<li>
+    					<%= link_to("Ranking", makes_path(sort: "ranking"),class: 'btn') %>
+    				</li>
+    				<li>
+    					<%= link_to("Category", makes_path, class: 'btn') %>
+    				</li>
+    				<li>
+    					<%= link_to("Make", new_make_path, class: 'btn') %>
+    				</li>
+
+    			</ul>
+    		<% end %>
+    	</header>
+
+      <div class = "main-body">
+        <%= yield %>
+      </div>
+      <footer>
+      </footer>
+    </div>
+  </body>
+</html>

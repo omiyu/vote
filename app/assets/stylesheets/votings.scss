@@ -1,0 +1,89 @@
+// Place all the styles related to the Votings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//----共通部分-----ここから
+.page-name {
+  margin-left: 2.5vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  padding: 1.5vw;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.content {
+  margin: 2vw 3vw 5vw 3vw;
+}
+
+.content p{
+  font-size: 1.5vw;
+}
+
+.content ul {
+  margin: 1vw 10vw;
+  padding: 0;
+  list-style: none;
+}
+
+.content li {
+  font-size: 1vw;
+}
+
+.content-tag {
+  font-size: 2.5vw;
+  margin: 0.5vw;
+}
+
+.account-name {
+  font-size: 1.5vw;
+  margin: 1vw 5vw;
+}
+
+//----共通部分-----ここまで
+
+//----Newページ-----ここから
+.new-voting {
+  margin: 0.5vw 6vw 2vw 6vw;
+}
+
+.new-make p {
+  font-size: 1vw;
+}
+
+.option-tag {
+  margin: 3vw 2vw;
+}
+.option-select-tag {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  flex-direction: row;   //*横並び・左から右（デフォルト）*/
+  flex-wrap: wrap;       //*折り返し有り・複数行*/
+  justify-content: flex-start;  //*左（上）揃え*/
+  align-items: center;  //*中央揃え*/
+  align-content: space-around;
+}
+
+.option-select-tag li {
+  font-size: 1.3vw;
+  width: 33%;
+
+}
+
+.vote-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0vw;
+}
+
+.vote-btn p {
+  margin: 0 0.3vw;
+}
+
+
+//----Newページ-----ここまで

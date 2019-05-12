@@ -1,0 +1,23 @@
+<div class="page-name">★ <%= @page_name%>　</div>
+
+<div class="pie-charts">
+  <% @graphs.each_with_index do |graph,i|%>
+    <div class="pie-chart">
+      <%= high_chart("chart#{i}", graph) %>
+
+      <div class="votes-count">
+        Votes Cast：<%= graph[0][:answer_all_ct]%>
+      </div>
+
+      <div class="vote-btn">
+
+        <p><%= link_to "Vote", new_voting_path(make_id: graph[0][:make_id]), type: "button", class: "btn btn-primary"%></p>
+        <p><%= link_to "CSV", csv_export_path(make_id: graph[0][:make_id],format: "csv"), type: "button", class: "btn btn-warning"%></p>
+      </div>
+
+      <!-- <div class="vote-button"> -->
+      <!-- </div> -->
+
+    </div>
+  <% end %>
+</div>

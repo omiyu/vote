@@ -1,0 +1,120 @@
+// Place all the styles related to the makes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//----共通部分-----ここから
+.page-name {
+  margin-left: 2.5vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  padding: 1.5vw;
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+.content {
+  margin: 0.5vw;
+}
+
+.highcharts-title tspan {
+  font-size: 1vw;
+  color: blue;
+}
+
+//----共通部分-----ここまで
+
+//----indexページ-----ここから
+.pie-charts {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  flex-direction: row;   //*横並び・左から右（デフォルト）*/
+  flex-wrap: wrap;       //*折り返し有り・複数行*/
+  justify-content: flex-start;  //*左（上）揃え*/
+  align-items: center;  //*中央揃え*/
+  align-content: space-around; //*均等に間隔をあける・両端にも間隔をあける*/
+}
+
+.pie-chart {
+  width: 30%;
+  margin: 2vw 1vw 4vw 1vw;
+}
+
+.votes-count{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+}
+
+.vote-button {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+}
+
+// .vote-button p {
+//   margin: 0 0.3vw;
+// }
+
+//
+// .btn btn-primary {
+//   align-items: left;
+// }
+
+.vote {
+  color: white;
+}
+//----indexページ-----ここまで
+
+//----Newページ-----ここから
+.new-make {
+  margin: 0.5vw 6vw 2vw 6vw;
+}
+
+.new-make p {
+  font-size: 1vw;
+}
+
+//----Newページ-----ここまで
+
+//----showページ-----ここから
+.chart-show {
+  margin: 0.5vw 6vw 2vw 6vw;
+}
+
+.option-tag {
+  margin: 3vw 2vw;
+}
+.made-options {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  flex-direction: row;   //*横並び・左から右（デフォルト）*/
+  flex-wrap: wrap;       //*折り返し有り・複数行*/
+  justify-content: flex-start;  //*左（上）揃え*/
+  align-items: center;  //*中央揃え*/
+  align-content: space-around;
+}
+
+.made-options li {
+  font-size: 1.3vw;
+  width: 33%;
+
+}
+
+
+//----showページ-----ここまで

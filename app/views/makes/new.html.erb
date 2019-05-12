@@ -1,0 +1,34 @@
+<!--　投票作成ページ -->
+<div class="page-name">★ Make</div>
+
+<!--form_forとsubmitの組合せで"Make it"が押されるとMakeコントローラーのcreateアクションが実行される-->
+<div class="new-make">
+  <%= form_for(@make) do |f| %>
+    <div class="content">
+      <div class="content-tag">Question</div>
+      <p>・投票してほしい質問を記入してください</p>
+      <%= f.text_field :question %>
+    </div>
+    <div class="content">
+      <div class="content-tag">Question category</div>
+      <p>・作成する質問のカテゴリーを選択してください</p>
+      <%= f.select(:category_id, @category.map{|c| [c.category_name, c.id]}) %>
+    </div>
+      <!-- セレクトタグを使う -->
+    <div class="content">
+      <div class="content-tag">Options</div>
+      <p>・投票するための選択肢を記入してください</p>
+      <p>1：<%= f.text_field :answer_1 %></p>
+      <p>2：<%= f.text_field :answer_2 %></p>
+      <p>3：<%= f.text_field :answer_3 %></p>
+      <p>4：<%= f.text_field :answer_4 %></p>
+      <p>5：<%= f.text_field :answer_5 %></p>
+      <p>6：<%= f.text_field :answer_6 %></p>
+      <p>7：<%= f.text_field :answer_7 %></p>
+      <p>8：<%= f.text_field :answer_8 %></p>
+      <p>9：<%= f.text_field :answer_9 %></p>
+      <p>10：<%= f.text_field :answer_10 %></p>
+    </div>
+      <p><%= f.submit "Make it",class: "btn btn-primary"%></p>
+  <% end %>
+</div>

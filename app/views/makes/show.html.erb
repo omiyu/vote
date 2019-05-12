@@ -1,0 +1,49 @@
+<!--　pie chart１つ -->
+<div class="page-name">★ The Chart</div>
+
+<div class="chart-show">
+    <div class="content">
+      <div class="content-tag">Question：<%= @make.question %></div>
+    </div>
+
+    <div class="content">
+      <div class="content-tag">Category：<%= @category.category_name %></div>
+    </div>
+
+    <div class="content">
+      <div class="content-tag">Options：</div>
+      <div class="option-tag">
+        <ol class="made-options">
+          <li>  <%= @make.answer_1 %></li>
+          <li>  <%= @make.answer_2 %></li>
+          <li>  <%= @make.answer_3 %></li>
+          <li>  <%= @make.answer_4 %></li>
+          <li>  <%= @make.answer_5 %></li>
+          <li>  <%= @make.answer_6 %></li>
+          <li>  <%= @make.answer_7 %></li>
+          <li>  <%= @make.answer_8 %></li>
+          <li>  <%= @make.answer_9 %></li>
+          <li>  <%= @make.answer_10 %></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="content-tag">Made by：@<%= @current_user.account_name %></div>
+    </div>
+
+    <div class="Pie charts">
+      <div class="Pie chart">
+        <!--円グラフ-->
+        <!--Like-ボタン->
+        <!--投票ボタン（投票ページに飛ぶ”/vote/?”）-->
+        <!--CSVダウンロード-->
+        <!--編集ボタン（編集ページに飛ぶ””）-->
+        <!--削除ボタン-->
+      </div>
+    </div>
+
+    <div class="content">
+      <%= link_to "Back", makes_path,class: "btn btn-primary"%>
+    </div>
+</div>
