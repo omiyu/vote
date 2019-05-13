@@ -1,47 +1,50 @@
 <!--新規登録ページ　＆　プロフィール編集ページ-->
-<div class="page-name">Sign up</div>
+<div class="page-name">★ Sign up</div>
 
 <!--submitを押すとshowに飛ぶ-->
-<%= form_for(@user) do |f| %>
-	<h1>Real name</h1>
-	<p>本名を入力してください</p>
-	<%= f.text_field :name %>
+<div class="content">
 
-	<h1>E-mail address</h1>
-	<p>お使いのメールアドレスを入力してください</p>
-	<p><%= f.text_field :email %></p>
+	<%= form_for(@user) do |f| %>
+		<div class="content-tag">Real name</div>
+		<p>・本名を入力してください</p>
+		<%= f.text_field :name %>
 
-	<h1>Account name</h1>
-	<p>アカウント名を入力してください</p>
-	<p><%= f.text_field :account_name %></p>
+		<div class="content-tag">E-mail address</div>
+		<p>・お使いのメールアドレスを入力してください</p>
+		<p><%= f.text_field :email %></p>
 
-	<h1>Age</h1>
-	<p>年齢を半角数字で入力してください</p>
-	<p><%= f.number_field(:age)%></p>
+		<div class="content-tag">Account name</div>
+		<p>・アカウント名を入力してください</p>
+		<p><%= f.text_field :account_name %></p>
 
-	<h1>Sex</h1>
-	<p>性別を選択してください</p>
-	<label><%= f.radio_button(:sex, 0) %>男</label>
-	<label><%= f.radio_button(:sex, 1) %>女</label>
-	<label><%= f.radio_button(:sex, 2) %>その他</label>
+		<div class="content-tag">Age</div>
+		<p>・年齢を半角数字で入力してください</p>
+		<p><%= f.number_field(:age)%></p>
 
-	<h1>Profession</h1>
-	<p>職業を選択してください</p>
-	<%= f.select(:profession, @profession) %>
+		<div class="content-tag">Sex</div>
+		<p>・性別を選択してください</p>
+		<label><%= f.radio_button(:sex, 0) %>男</label>
+		<label><%= f.radio_button(:sex, 1) %>女</label>
+		<label><%= f.radio_button(:sex, 2) %>その他</label>
 
-	<h1>Address</h1>
-	<p>お住いの都道府県を選択してください</p>
-	<%= f.select(:address_pref, @prefectur) %>
+		<div class="content-tag">Profession</div>
+		<p>・職業を選択してください</p>
+		<%= f.select(:profession, @profession) %>
 
-	<h1>Annual income</h1>
-	<p>おおよその年収を選択してください</p>
-	<p><%= f.select(:annual_income, @annual_income) %>万円</p>
+		<div class="content-tag">Address</div>
+		<p>・お住いの都道府県を選択してください</p>
+		<%= f.select(:address_pref, @prefectur) %>
 
-	<h1>Password</h1>
-	<p>パスワードを記入してください</p>
-	<p><%= f.password_field :password %></p>
-	<p>確認のため、パスワードを再記入してください</p>
-	<p><%= f.password_field :password_confirmation %></p>
+		<div class="content-tag">Annual income</div>
+		<p>・おおよその年収を選択してください</p>
+		<p><%= f.select(:annual_income, @annual_income) %>万円</p>
 
-	<%= f.submit "Sign up", class: "btn btn-default"%>
-<% end %>
+		<div class="content-tag">Password</div>
+		<p>・パスワードを記入してください</p>
+		<p><%= f.password_field :password %></p>
+		<p>・確認のため、パスワードを再記入してください</p>
+		<p><%= f.password_field :password_confirmation %></p>
+
+		<%= f.submit "Sign up", class: "btn btn-default"%>
+	<% end %>
+</div>

@@ -1,12 +1,15 @@
-<div class="page-name">Login</div>
+<div class="page-name">★ Login</div>
+<div class="content">
 
-<%= form_for(:session, url: login_path) do |f|%>
+  <%= form_for(:session, url: login_path) do |f|%>
 
-  <p>E-mail</p>
-  <p><%= f.text_field :email, value: @user_email %></p>
+    <div class="content-tag">E-mail</div>
+    <p><%= f.text_field :email, value: @user_email %></p>
 
-  <p>Password</p>
-  <p><%= f.password_field :password %></p>
+    <div class="content-tag">Password</div>
+    <p><%= f.password_field :password %></p>
 
-  <%= f.submit "Login!", class: "btn btn-default"%>
-<% end %>
+    <%= f.submit "Login!", class: "btn btn-default"%>
+  <% end %>
+
+</div>

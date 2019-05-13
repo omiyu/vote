@@ -12,7 +12,6 @@ class VotingsController < ApplicationController
     @voting = Voting.new
     @make = Make.find_by(id: params[:make_id])
     @category = Category.find_by(id: @make.category_id)
-    #@answers_make =
   end
 
   def edit
@@ -54,14 +53,4 @@ class VotingsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_voting
-      @voting = Voting.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def voting_params
-      params.require(:voting).permit(:make_id, :user_id, :answer_id)
-    end
 end

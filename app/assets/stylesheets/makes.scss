@@ -103,10 +103,10 @@
   display: -o-flex;
   display: flex;
 
-  flex-direction: row;   //*横並び・左から右（デフォルト）*/
-  flex-wrap: wrap;       //*折り返し有り・複数行*/
-  justify-content: flex-start;  //*左（上）揃え*/
-  align-items: center;  //*中央揃え*/
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
   align-content: space-around;
 }
 
