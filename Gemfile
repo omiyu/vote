@@ -36,6 +36,7 @@ gem 'whenever', require: false
 # gem 'capistrano-rails', group: :development
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.7'
+gem 'kaminari', '~> 0.17.0'
 
 
 

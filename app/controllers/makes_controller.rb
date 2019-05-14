@@ -1,5 +1,6 @@
 class MakesController < ApplicationController
   require 'csv'
+  PER = 9
 
   #before_action :set_make, only: [:show, :edit, :update, :destroy]
 
@@ -34,6 +35,8 @@ class MakesController < ApplicationController
       graph[0][:make_id] = make_summary.make.id
       graph[0][:answer_all_ct] = make_summary.answer_all_ct
       @graphs << graph
+
+
     end
   end
 
